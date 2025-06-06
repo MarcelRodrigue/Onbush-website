@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/fav_icono.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Onbush 237</title>
+  </head>
+  <body class="bg-bg_clr text-text_clr w-full h-full overflow-x-hidden p-5">
+
+<header id="Accueil">
+  <nav class="grid grid-cols-4 gap-2 items-center p-1 border-b-2 border-border_clr">
+    <div class="logo scale-105 lg:scale-50 flex justify-start items-center w-fit py-3 md:py-0">
+        <a href="./index.html">
+      <img src="./public/logo onbush custom.svg" alt="" srcset="">
+      </a>
+    </div>
+
+    <ul class="col-span-2 items-center justify-center gap-7 text-md text-text_clr font-medium hidden md:flex">
+      <li class="navcontent text-primary_blue"><a href="#Accueil">Accueil</a></li>
+      <li class="navcontent"><a href="#Fonctionnalités">Fonctionnalités</a></li>
+      <li class="navcontent"><a href="#Témoignages">Témoignages</a></li>
+    </ul>
+
+    <div class="justify-center items-center gap-2 hidden lg:flex">
+      <button class="btn bg-primary_blue p-2 px-5 rounded-3xl flex items-center justify-end text-white font-semibold w-fit border-2">Télécharger</button>
+      <button class="btn bg-white p-2 px-5 rounded-3xl flex items-center justify-end text-text_clr font-semibold border border-text_clr w-fit">
+        <a href="https://wa.link/qw678w" target="_blank">Nous Contacter</a>
+      </button>
+    </div>
+  </nav>
+
+  <section class="flex flex-col items-center justify-center gap-5 my-10">
+    <h1 class="text-4xl font-bold text-text_clr items-center px-1 py-5 text-center">Télécharger l'application OnBush</h1>
+
+    <div class="section text-text_clr text-xl font-medium">
+      <h2 class="text-2xl text-primary_blue">Téléchargement automatique</h2>
+    
+      <p>
+        En cliquant sur le bouton <span class="text-secondary_blue">télécharger automatiquement</span>, nous détectons automatiquement la version Android appropriée pour votre appareil et lançons le téléchargement.
+      </p>
+      <br>
+      <br>
+      <br>
+     
+      
+<div id="apk-button-container"></div>
+
+      <br>
+      <p class="bg-yellow-100 p-3 rounded-sm font-normal">
+        <span class="font-extrabold text-yellow-500">NOTE :</span> Si après téléchargement l'application ne s’installe pas, vous pouvez essayer une autre version en utilisant les liens ci-dessous.
+      </p>
+    </div>
+
+    <br>
+
+    <h2 class="text-2xl text-primary_blue font-medium">Téléchargement manuel</h2>
+    <br>
+
+    <p class="text-text_clr text-xl font-medium">
+      Va dans les paramètres de ton téléphone pour obtenir les informations sur l'architecture de ton appareil. 
+      <br>
+      Sur la plupart des téléphones Android :
+      <span class="text-secondary_blue"> Paramètres → À propos du téléphone → Informations sur le logiciel → Processeur ou Architecture</span>.
+      <br>
+      Une fois que c’est fait, télécharge la version appropriée ci-dessous :
+    </p>
+
+    <a href="https://onbush237.com/apps/x64/onBush_x64.apk" download="OnBush" class="btn bg-white p-2 px-10 md:px-7 py-4 md:py-3 rounded-3xl flex items-center justify-center text-text_clr font-semibold border-2 border-text_clr w-full">Télécharger pour ARM64</a>
+
+    <a href="https://onbush237.com/apps/x64/onBush_x64.apk" download="OnBush" class="btn bg-white p-2 px-10 md:px-7 py-4 md:py-3 rounded-3xl flex items-center justify-center text-text_clr font-semibold border-2 border-text_clr w-full">Télécharger pour ARM32</a>
+
+    <a href="https://onbush237.com/apps/x64/onBush_x64.apk" download="OnBush" class="btn bg-white p-2 px-10 md:px-7 py-4 md:py-3 rounded-3xl flex items-center justify-center text-text_clr font-semibold border-2 border-text_clr w-full">Télécharger pour x64</a>
+
+</header>
+
+<footer class="bg-text_clr rounded-lg shadow-sm m-4">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-200 sm:text-center">© 2025 <a href="symphonisocial.com" class="hover:underline">symphoni social SARL</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-200 sm:mt-0">
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+        </li>
+        <li>
+            <a href="https://wa.link/qw678w" class="hover:underline">Contact</a>
+        </li>
+    </ul>
+    </div>
+</footer>
+
+
+    <script type="module" src="/main.js"></script>
+<div id="apk-button-container"></div>
+
+<script>
+  function guessBestAPK(autoDownload = false, debug = false) {
+    try {
+      const ua = navigator.userAgent || '';
+      const platform = navigator.platform || '';
+      const memory = navigator.deviceMemory || 0;
+      const isAndroid = /Android/i.test(ua) || debug;
+
+      if (!isAndroid && !debug) {
+        console.warn("Not an Android device — APK download skipped.");
+        return null;
+      }
+
+      const scores = { arm64: 0, arm32: 0, x64: 0 };
+
+      if (/arm64|aarch64/i.test(ua)) scores.arm64 += 3;
+      if (/armv7|armeabi/i.test(ua)) scores.arm32 += 3;
+      if (/x86_64|x64|x86/i.test(ua)) scores.x64 += 3;
+
+      if (memory >= 4) scores.arm64 += 2;
+      else if (memory > 0 && memory <= 2) scores.arm32 += 1;
+
+      if (/Linux aarch64/.test(platform)) scores.arm64 += 2;
+      else if (/Linux armv7l/.test(platform)) scores.arm32 += 2;
+      else if (/Linux x86_64/.test(platform)) scores.x64 += 2;
+
+      const versionMatch = ua.match(/Android\s([0-9.]+)/);
+      if (versionMatch) {
+        const androidVersion = parseFloat(versionMatch[1]);
+        if (androidVersion >= 9) scores.arm64 += 1;
+        else if (androidVersion <= 6) scores.arm32 += 1;
+      }
+
+      const bestArch = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+      const apkLinks = {
+        arm64: "https://onbush237.com/apps/x64/onBush_arm64.apk",
+        arm32: "https://onbush237.com/apps/x64/onBush_arm32.apk",
+        x64:   "https://onbush237.com/apps/x64/onBush_x64.apk"
+      };
+
+      return apkLinks[bestArch] || null;
+    } catch (err) {
+      console.error("APK detection failed:", err);
+      return null;
+    }
+  }
+
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const ua = navigator.userAgent || '';
+    const isAndroid = /Android/i.test(ua);
+    const container = document.getElementById('apk-button-container');
+
+    const downloadURL = guessBestAPK(false, false);
+
+    if (isAndroid && downloadURL) {
+      container.innerHTML = `
+        <a href="${downloadURL}" download="OnBush" id="apk-download-btn"
+           class="btn bg-primary_blue p-2 px-10 md:px-7 py-4 md:py-3 rounded-3xl flex items-center justify-center text-white  font-semibold border-2 border-white">
+          Télécharger automatiquement
+        </a>
+      `;
+
+      // Wait for the download button to be in the DOM
+      const downloadBtn = document.getElementById('apk-download-btn');
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', (e) => {
+          // Change button text to show download in progress
+          downloadBtn.textContent = 'Téléchargement ...';
+
+          // Let the download trigger naturally
+          // Restore button text after a delay (simulate end of download trigger)
+          setTimeout(() => {
+            downloadBtn.textContent = 'Télécharger automatiquement';
+          }, 3000); // 3 seconds — adjust as needed
+        });
+      }
+
+    } else {
+      container.innerHTML = `
+        <button disabled class="btn bg-gray-400 text-white p-2 px-10 md:px-7 py-4 md:py-3 rounded-3xl flex items-center justify-center font-semibold border-2 border-gray-300">
+          Non disponible pour votre appareil
+        </button>
+      `;
+    }
+  });
+
+
+</script>
+
+
+  </body>
+</html>
